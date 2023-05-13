@@ -20,7 +20,9 @@ export default function App() {
           }}
         >
           <Stack.Screen name="Meal's Categories" component={Categories} />
-          <Stack.Screen name="Meal's Overview" component={MealsOverview} />
+          <Stack.Screen name="Meal's Overview" component={MealsOverview} 
+           
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
