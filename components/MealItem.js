@@ -1,6 +1,7 @@
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
+import MealDetailsBox from './MealDetailsBox';
 
 const MealItem = ({ item }) => {
   const navigation = useNavigation();
@@ -15,15 +16,8 @@ const MealItem = ({ item }) => {
             <Image source={{ uri: item.imageUrl }} style={styles.image} />
             <Text style={styles.title}>{item.title}</Text>
           </View>
-          <View style={styles.details}>
-            <Text style={styles.detailItem}>{item.duration}m</Text>
-            <Text style={styles.detailItem}>
-              {item.complexity.toUpperCase()}
-            </Text>
-            <Text style={styles.detailItem}>
-              {item.affordability.toUpperCase()}
-            </Text>
-          </View>
+
+          <MealDetailsBox item={item} />
         </View>
       </Pressable>
     </View>
