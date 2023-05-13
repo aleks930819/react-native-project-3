@@ -1,11 +1,14 @@
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const MealItem = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.mealItem}>
       <Pressable
         style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
+        onPress={() => navigation.navigate('Meal Details', { mealId: item.id })}
       >
         <View style={styles.innerContainer}>
           <View>
