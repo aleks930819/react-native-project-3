@@ -1,6 +1,8 @@
+import { useLayoutEffect } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
 import Categories from './screens/Categories';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, Button } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MealsOverview from './screens/MealsOverview';
 import MealDeatils from './screens/MealDeatils';
